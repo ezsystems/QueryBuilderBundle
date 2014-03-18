@@ -1,0 +1,30 @@
+<?php
+namespace eZ\Publish\Core\Repository;
+
+use eZ\Publish\API\Repository\GeneratedQueryBuilder as QueryBuilderInterface;
+use eZ\Publish\API\Repository\QueryBuilder\Builder\CriterionBuilder;
+use eZ\Publish\Core\Repository\QueryBuilder\BaseQueryBuilder;
+use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
+
+/**
+ * @method \eZ\Publish\API\Repository\GeneratedQueryBuilder or(\eZ\Publish\API\Repository\QueryBuilder\Builder\GeneratedCriterionBuilder $criterionBuilder) Start a LogicalOr criterion.
+ * @method \eZ\Publish\API\Repository\GeneratedQueryBuilder and(\eZ\Publish\API\Repository\QueryBuilder\Builder\GeneratedCriterionBuilder $criterionBuilder) Start a LogicalAnd criterion.
+ */
+class GeneratedQueryBuilder extends BaseQueryBuilder implements QueryBuilderInterface
+{
+{% for criterion in criterion_list %}
+    public function {{ criterion.id }}()
+    {
+        return $this->criterionBuilder->{{ criterion.id }}();
+    }
+
+{% endfor %}
+
+{% for fieldtype in fieldtype_list %}
+    public function {{ fieldtype.id }}Field( $fieldIdentifier )
+    {
+        return $this->criterionBuilder->{{ fieldtype.id }}Field( $fieldIdentifier );
+    }
+
+{% endfor %}
+}

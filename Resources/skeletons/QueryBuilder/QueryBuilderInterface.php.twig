@@ -1,0 +1,42 @@
+<?php
+namespace eZ\Publish\API\Repository;
+
+use eZ\Publish\API\Repository\QueryBuilder\Builder\GeneratedCriterionBuilder as CriterionBuilder;
+
+/**
+ * @method \eZ\Publish\API\Repository\GeneratedQueryBuilder or(\eZ\Publish\API\Repository\QueryBuilder\Builder\GeneratedCriterionBuilder $criterionBuilder) Start a LogicalOr criterion.
+ * @method \eZ\Publish\API\Repository\GeneratedQueryBuilder and(\eZ\Publish\API\Repository\QueryBuilder\Builder\GeneratedCriterionBuilder $criterionBuilder) Start a LogicalAnd criterion.
+ */
+interface GeneratedQueryBuilder extends CriterionBuilder
+{
+    /**
+     * @return \eZ\Publish\API\Repository\Values\Content\Query
+     */
+    public function getQuery();
+
+    /**
+     * @return \eZ\Publish\API\Repository\QueryBuilder\Builder\SortClauseBuilder
+     */
+    public function sortBy();
+
+    /**
+     * Creates a new criterion builder. Must be used within logical expressions
+     * @return \eZ\Publish\API\Repository\QueryBuilder\Builder\CriterionBuilder
+     */
+    public function expr();
+
+{% for criterion in criterion_list %}
+    /**
+     * @return \eZ\Publish\API\Repository\QueryBuilder\FactoryWorker\Criterion\GeneratedQueryBuilder\{{ criterion.worker_classname }}
+     */
+    public function {{ criterion.id }}();
+
+{% endfor %}
+{% for fieldtype in fieldtype_list %}
+    /**
+     * @return \eZ\Publish\API\Repository\QueryBuilder\FactoryWorker\Criterion\GeneratedQueryBuilder\{{ fieldtype.worker_classname }}
+     */
+    public function {{ fieldtype.id }}Field( $fieldIdentifier );
+
+{% endfor %}
+}
