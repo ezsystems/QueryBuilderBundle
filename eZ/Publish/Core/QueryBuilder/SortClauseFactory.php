@@ -6,7 +6,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
@@ -17,7 +17,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
  * $sortClauseFactory->setClass( 'F\Q\N\MySortClause' );
  * $sortClauseFactory->set
  *
- * @package EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder
+ * @package EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder
  */
 class SortClauseFactory implements FactoryInterface
 {

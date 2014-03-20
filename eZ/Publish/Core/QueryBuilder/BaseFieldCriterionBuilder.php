@@ -6,16 +6,16 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
 abstract class BaseFieldCriterionBuilder
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
     private $queryBuilder;
 
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionFactory */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory */
     private $criterionFactory;
 
     /** @var CriterionFactoryWorkerRegistry */
@@ -23,7 +23,7 @@ abstract class BaseFieldCriterionBuilder
 
     /**
      * @param \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder $queryBuilder
-     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionFactory $criterionFactory
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory $criterionFactory
      * @param CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry
      */
     public function __construct( CriterionBuilderInterface $queryBuilder, CriterionFactory $criterionFactory, CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry )

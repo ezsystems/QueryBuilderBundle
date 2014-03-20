@@ -6,12 +6,12 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use Exception;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder as CriterionBuilderInterface;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 /**
  * @method CriterionBuilder or(CriterionBuilder $criterionBuilder) Start a LogicalOr criterion. Terminate with {@see endOr()}.

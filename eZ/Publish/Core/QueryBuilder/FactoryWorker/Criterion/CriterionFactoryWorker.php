@@ -6,25 +6,25 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\FactoryWorker\Criterion;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion;
 
 use Exception;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionFactory;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\Criterion\CriterionFactoryWorker as CriterionFactoryWorkerInterface;
 
 abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
     protected $queryBuilder;
 
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionFactory */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory */
     protected $criterionFactory;
 
     /**
-     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionFactory $criterionFactory
-     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionBuilderInterface $builder
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory $criterionFactory
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionBuilderInterface $builder
      */
     public function __construct( CriterionFactory $criterionFactory, CriterionBuilder $builder )
     {

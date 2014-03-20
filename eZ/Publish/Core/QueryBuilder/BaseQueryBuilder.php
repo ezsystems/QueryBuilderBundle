@@ -6,7 +6,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use eZ\Publish\Core\Base\Exceptions\InvalidArgumentType;
 use eZ\Publish\API\Repository\Values\Content\Query;
@@ -21,7 +21,7 @@ abstract class BaseQueryBuilder extends BaseCriterionBuilder
     /** @var Query\SortClause[] */
     private $sortClauseArray = array();
 
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\CriterionBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionBuilder */
     protected $criterionBuilder;
 
     public function __construct( CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry )

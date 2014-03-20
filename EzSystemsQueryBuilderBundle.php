@@ -2,7 +2,7 @@
 
 namespace EzSystems\QueryBuilderBundle;
 
-use eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler\QueryBuilderPass;
+use EzSystems\QueryBuilderBundle\DependencyInjection\Compiler\QueryBuilderPass;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 

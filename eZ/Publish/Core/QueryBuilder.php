@@ -1,9 +1,9 @@
 <?php
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core;
 
 use Exception;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder as QueryBuilderInterface;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\BaseQueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\BaseQueryBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
 /**

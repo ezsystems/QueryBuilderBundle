@@ -7,12 +7,11 @@
  * @version //autogentag//
  */
 
-namespace eZ\Bundle\EzPublishCoreBundle\DependencyInjection\Compiler;
+namespace EzSystems\QueryBuilderBundle\DependencyInjection\Compiler;
 
-use eZ\Bundle\EzPublishCoreBundle\Generator\QueryBuilderGenerator;
+use EzSystems\QueryBuilderBundle\Generator\QueryBuilderGenerator;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
-use Symfony\Component\DependencyInjection\Reference;
 
 /**
  * This compiler pass will register eZ Publish field types.
@@ -29,8 +28,8 @@ class QueryBuilderPass implements CompilerPassInterface
         $generator = new QueryBuilderGenerator();
         $generator->setSkeletonDirs(
             array(
-                '/home/bertrand/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/skeletons/',
-                '/home/bertrand/ezpublish-kernel/eZ/Bundle/EzPublishCoreBundle/Resources/'
+                '/home/bertrand/ezpublish5/vendor/ezsystems/query-builder-bundle/EzSystems/QueryBuilderBundle/Resources/skeletons/',
+                '/home/bertrand/ezpublish5/vendor/ezsystems/query-builder-bundle/EzSystems/QueryBuilderBundle/Resources/'
             )
         );
         $generator->generate(

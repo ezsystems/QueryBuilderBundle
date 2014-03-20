@@ -6,16 +6,16 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\SortClauseBuilder as SortClauseBuilderInterface;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker;
 
 class SortClauseBuilder implements SortClauseBuilderInterface
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilderBundle\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
     protected $queryBuilder;
 
     protected function startSortClauseFactoryWork( $sortClauseClass )
