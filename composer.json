@@ -1,0 +1,19 @@
+{
+    "name": "ezsystems/query-builder-bundle",
+    "description": "Fluent repository query builder for eZ Publish 5",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Bertrand Dunogier",
+            "email": "bd@ez.no"
+        }
+    ],
+    "require": {
+        "ezsystems/ezpublish-api": "*",
+        "symfony/symfony": "*"
+    },
+    "autoload": {
+        "psr-0": {"EzSystems\\QueryBuilderBundle": ""}
+    },
+    "target-dir": "EzSystems/QueryBuilderBundle"
+}
