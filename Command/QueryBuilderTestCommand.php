@@ -21,16 +21,23 @@ class QueryBuilderTestCommand extends ContainerAwareCommand
 {
     protected function execute( InputInterface $input, OutputInterface $output )
     {
+        // get the query from a method to have proper type hinting
         $queryBuilder = $this->getQueryBuilder();
+
+        // use the fluent API to build the query
         $queryBuilder
             ->contentTypeIdentifier()->in( 'article', 'blog_post' )
             ->sectionId()->eq( 1 )
-            ->textLineField( 'title' )->contains( 'template' )
+            ->textLineField( 'title' )->contains( 'service' )
             ->sortBy()
                 ->contentName()->descending();
-        $query = $queryBuilder->getQuery();
 
-        $this->printSearchResults( $output, $query );
+
+        // run the query, and print out the results
+        $this->printSearchResults(
+            $output,
+            $queryBuilder->getQuery()
+        );
     }
 
     protected function configure()
