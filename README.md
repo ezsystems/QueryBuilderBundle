@@ -16,7 +16,28 @@ It has only been tested with PhpStorm 7 and 8 so far.
 
 ## Installation
 
-From your eZ Publish 5 installation, run `composer require ezsystems/query-builder-bundle
+From your eZ Publish 5 installation, run `composer require ezsystems/query-builder-bundle.
+Register the bundle in `ezpublish/EzPublishKernel.php:
+
+```php
+    public function registerBundles()
+    {
+        $bundles = array(
+            new FrameworkBundle(),
+            // [...]
+            new NelmioCorsBundle(),
+            new \EzSystems\QueryBuilder\EzSystemsQueryBuilderBundle()
+        );
+```
+
+## Testing out the prototype
+
+A command is available that can be used to test the builder: `php ezpublish/console query-builder:test`.
+It will execute the query written in
+`vendor/ezsystems/query-builder-bundle/EzSystems/QueryBuilderBundle/Command/QueryBuilderTestCommand.php`, and print
+ out the results as a table.
+
+ You can play with it, and test the various methods.
 
 ## Usage
 

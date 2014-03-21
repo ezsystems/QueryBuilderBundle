@@ -1,6 +1,6 @@
 <?php
 /**
- * File containing the TestInitDbCommand class.
+ * File containing the QueryBuilderTestCommand class.
  *
  * @copyright Copyright (C) 2013 eZ Systems AS. All rights reserved.
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
@@ -19,25 +19,23 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class QueryBuilderTestCommand extends ContainerAwareCommand
 {
-    protected function configure()
-    {
-        $this->setName( 'query-builder:test' );
-    }
-
     protected function execute( InputInterface $input, OutputInterface $output )
     {
-
-        // home: 45.7093779, 4.812085799999977
-        // office: 45.76272282060459, 4.835738895106488
-        // sections: media = 3, content = 1
-        // checkbox: vip
-        
         $queryBuilder = $this->getQueryBuilder();
         $queryBuilder
-            ->sortBy()->contentName()->desc();
+            ->contentTypeIdentifier()->in( 'article', 'blog_post' )
+            ->sectionId()->eq( 1 )
+            ->textLineField( 'title' )->contains( 'template' )
+            ->sortBy()
+                ->contentName()->descending();
         $query = $queryBuilder->getQuery();
 
         $this->printSearchResults( $output, $query );
+    }
+
+    protected function configure()
+    {
+        $this->setName( 'query-builder:test' );
     }
 
     /** 
