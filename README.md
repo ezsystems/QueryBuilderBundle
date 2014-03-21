@@ -1,8 +1,8 @@
 # eZ Publish Query Builder bundle
 
 This bundle for eZ Publish, the open-source CMS platform, provides a PHP API dedicated to fluently writing repository
-queries. It is built to provide accurate and contextually relevant code completion as long as a rich PHP IDE is used
-(PhpStorm, Eclipse, NetBeans...).
+queries. It is built to provide **accurate** and contextually relevant **code completion** as long as a rich PHP IDE is used
+(**tested with PhpStorm, Eclipse and NetBeans**, works out of the box on all).
 
 ## Status: prototype
 
