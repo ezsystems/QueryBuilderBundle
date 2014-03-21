@@ -27,16 +27,25 @@ class QueryBuilderTestCommand extends ContainerAwareCommand
         // use the fluent API to build the query
         $queryBuilder
             ->contentTypeIdentifier()->in( 'article', 'blog_post' )
-            ->sectionId()->eq( 1 )
             ->textLineField( 'title' )->contains( 'service' )
+            ->textLineField( 'title' )->not()->contains( 'enterprise' )
+            ->contentId()->not()->in( 81 )
             ->sortBy()
                 ->contentName()->descending();
 
+        $query = $queryBuilder->getQuery();
+
+        if ( $output->getVerbosity() > OutputInterface::VERBOSITY_NORMAL )
+        {
+            $output->writeln( '' );
+            $output->writeln( "QUERY: $query" );
+            $output->writeln( '' );
+        }
 
         // run the query, and print out the results
         $this->printSearchResults(
             $output,
-            $queryBuilder->getQuery()
+            $query
         );
     }
 

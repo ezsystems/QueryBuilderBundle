@@ -18,6 +18,12 @@ class CriterionFactory implements FactoryInterface
     private $operator;
     private $value;
 
+    /**
+     * If set to true, the Criterion will be negated
+     * @var bool
+     */
+    private $isNegative = false;
+
     public function __construct( $criterionClass, $target = null )
     {
         $this->criterionClass = $criterionClass;
@@ -33,10 +39,17 @@ class CriterionFactory implements FactoryInterface
      */
     public function create()
     {
-        return call_user_func_array(
+        $criterion = call_user_func_array(
             array( $this->criterionClass, 'createFromQueryBuilder' ),
             array( $this->target, $this->operator, $this->getValue() )
         );
+
+        if ( $this->isNegative )
+        {
+            $criterion = new Criterion\LogicalNot( $criterion );
+        }
+
+        return $criterion;
     }
 
     public function setTarget( $target )
@@ -73,5 +86,10 @@ class CriterionFactory implements FactoryInterface
         }
 
         return $this->value;
+    }
+
+    public function negate()
+    {
+        $this->isNegative = true;
     }
 }

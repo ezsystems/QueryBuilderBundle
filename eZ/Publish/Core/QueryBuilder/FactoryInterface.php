@@ -16,6 +16,8 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
  * $thingFactory->setProperty( 'x' );
  * $thing = $thingFactory->create()
  * </code>
+ *
+ * @todo Rename to CriterionFactoryInterface
  */
 interface FactoryInterface
 {
@@ -23,4 +25,12 @@ interface FactoryInterface
      * @return mixed Creates an instance of the class handled by the factory
      */
     public function create();
+
+    /**
+     * Negates the Criterion
+     * @todo Should be a criterion thing (NegatableCriterionInterface ?)
+     * @return void
+     */
+    // public function negate();
 }
+

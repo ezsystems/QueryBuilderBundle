@@ -50,7 +50,7 @@ abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
 
     public function not()
     {
-        throw new Exception( "Not implemented" );
-        // return $this->queryBuilder;
+        $this->criterionFactory->negate();
+        return $this;
     }
 }
