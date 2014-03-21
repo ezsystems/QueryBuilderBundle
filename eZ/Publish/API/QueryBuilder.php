@@ -20,9 +20,9 @@ use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBu
  *
  * <code>
  * $queryBuilder
- *     ->contentTypeIdentifier( 'article' )
+ *     ->contentTypeIdentifier()->in( 'article' )
  *     ->sectionId( 4 )
- *     ->field()->checkbox( 'vip' )->isTrue()
+ *     ->checkBoxField( 'vip' )->isTrue()
  *     ->sortBy()->contentName()->ascending();
  * $query = $queryBuilder->getQuery();
  * </code>
