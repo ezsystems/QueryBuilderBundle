@@ -11,6 +11,7 @@ class EzSystemsQueryBuilderBundle extends Bundle
     public function build( ContainerBuilder $container )
     {
         parent::build( $container );
-        $container->addCompilerPass( new QueryBuilderPass() );
+        // Temporarily commented out because of hardcoded paths
+        // $container->addCompilerPass( new QueryBuilderPass() );
     }
 }
