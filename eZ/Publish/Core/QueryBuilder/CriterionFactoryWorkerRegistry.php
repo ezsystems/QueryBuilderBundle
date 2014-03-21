@@ -8,7 +8,7 @@
  */
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder;
 use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder;
 
@@ -22,13 +22,13 @@ class CriterionFactoryWorkerRegistry
      * @var string[string]
      */
     protected static $criterionFactoryWorkers = array(
-        'date' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\DateCriterionFactoryWorker',
-        'identifier' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\IdentifierCriterionFactoryWorker',
-        'id' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\IdCriterionFactoryWorker',
-        'text' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\TextCriterionFactoryWorker',
-        'bool' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\BooleanCriterionFactoryWorker',
-        'number' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\NumberCriterionFactoryWorker',
-        'map_location' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\MapLocationDistanceCriterionFactoryWorker'
+        'date' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\DateCriterionFactoryWorker',
+        'identifier' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\IdentifierCriterionFactoryWorker',
+        'id' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\IdCriterionFactoryWorker',
+        'text' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\TextCriterionFactoryWorker',
+        'bool' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\BooleanCriterionFactoryWorker',
+        'number' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\NumberCriterionFactoryWorker',
+        'map_location' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\MapLocationDistanceCriterionFactoryWorker'
     );
 
     /**

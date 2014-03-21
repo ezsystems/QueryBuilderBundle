@@ -9,13 +9,13 @@
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\SortClauseBuilder as SortClauseBuilderInterface;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query;
 use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker;
 
 class SortClauseBuilder implements SortClauseBuilderInterface
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder */
     protected $queryBuilder;
 
     protected function startSortClauseFactoryWork( $sortClauseClass )

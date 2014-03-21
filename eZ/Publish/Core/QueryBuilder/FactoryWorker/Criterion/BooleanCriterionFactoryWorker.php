@@ -18,7 +18,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion\Operator;
 class BooleanCriterionFactoryWorker extends CriterionFactoryWorker implements BooleanCriterionFactoryWorkerInterface
 {
     /**
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function isTrue()
     {
@@ -26,7 +26,7 @@ class BooleanCriterionFactoryWorker extends CriterionFactoryWorker implements Bo
     }
 
     /**
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function isFalse()
     {

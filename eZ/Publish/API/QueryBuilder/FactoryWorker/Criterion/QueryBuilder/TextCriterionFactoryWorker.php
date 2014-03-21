@@ -12,33 +12,40 @@ interface TextCriterionFactoryWorker extends CriterionFactoryWorker
 {
     /**
      * Text must contain $value
-     * @param string $value Value the text must contain
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@param string $value Value the text must contain
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function contains( $value );
 
     /**
      * Flexible match with a like operator and wildcards (using %)
-     * @param string $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@param string $value
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function like( $value );
 
     /**
      * @param string $value Value the text must end with
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function endsWith( $value );
 
     /**
      * @param string $value Value the text must begin with
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function beginsWith( $value );
 
     /**
      * @param $regexp
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function matches( $regexp );
 

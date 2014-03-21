@@ -12,25 +12,29 @@ interface DateCriterionFactoryWorker extends CriterionFactoryWorker
 {
     /**
      * @param \DateTime|string $value A DateTime object or strtotime compatible string to compare against.
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function between( $startDate, $endDate );
 
     /**
      * @param \DateTime|string $value A DateTime object or strtotime compatible string to compare against.
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function at( $date );
 
     /**
      * @param \DateTime|string $value A DateTime object or strtotime compatible string to compare against.
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function before( $date );
 
     /**
      * @param \DateTime|string $value A DateTime object or strtotime compatible string to compare against.
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function after( $date );
 

@@ -16,7 +16,7 @@ use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\Crite
 
 abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder */
     protected $queryBuilder;
 
     /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory */
@@ -36,7 +36,7 @@ abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
      * Adds the calling criterion with $operator and $value to the query, and returns the builder
      * @param mixed $value
      * @param mixed $operator
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     protected function addCriterion( $value, $operator )
     {
