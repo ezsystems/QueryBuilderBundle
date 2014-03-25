@@ -11,7 +11,7 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 use Exception;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder as CriterionBuilderInterface;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder;
 
 /**
  * @method CriterionBuilder or(CriterionBuilder $criterionBuilder) Start a LogicalOr criterion. Terminate with {@see endOr()}.

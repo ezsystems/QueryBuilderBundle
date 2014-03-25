@@ -12,7 +12,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
 abstract class BaseFieldCriterionBuilder
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder */
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder */
     private $queryBuilder;
 
     /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory */
@@ -22,7 +22,7 @@ abstract class BaseFieldCriterionBuilder
     protected $criterionFactoryWorkerRegistry;
 
     /**
-     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder $queryBuilder
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder $queryBuilder
      * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory $criterionFactory
      * @param CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry
      */

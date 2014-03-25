@@ -11,7 +11,7 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorke
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker as SortClauseDirectionFactoryWorkerInterface;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\SortClauseBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder;
 use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\SortClauseFactory;
 
 /**

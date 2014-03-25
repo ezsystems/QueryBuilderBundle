@@ -6,7 +6,7 @@
  * @license http://www.gnu.org/licenses/gpl-2.0.txt GNU General Public License v2
  * @version //autogentag//
  */
-namespace EzSystems\QueryBuilderBundle\eZ\Publish\API;
+namespace EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder;
 
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder;
 
@@ -27,8 +27,8 @@ use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBu
  * $query = $queryBuilder->getQuery();
  * </code>
  *
- * @method \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder or(\EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder $criterionBuilder) Start a LogicalOr criterion.
- * @method \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder and(\EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder $criterionBuilder) Start a LogicalAnd criterion.
+ * @method \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder or(\EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder $criterionBuilder) Start a LogicalOr criterion.
+ * @method \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder and(\EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder $criterionBuilder) Start a LogicalAnd criterion.
  */
 interface QueryBuilder extends CriterionBuilder
 {

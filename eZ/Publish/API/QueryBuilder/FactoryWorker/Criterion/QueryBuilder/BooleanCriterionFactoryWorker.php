@@ -14,12 +14,12 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker
 interface BooleanCriterionFactoryWorker
 {
     /**
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function isTrue();
 
     /**
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function isFalse();
 }

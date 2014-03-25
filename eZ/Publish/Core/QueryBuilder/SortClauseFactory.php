@@ -17,7 +17,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
  * $sortClauseFactory->setClass( 'F\Q\N\MySortClause' );
  * $sortClauseFactory->set
  *
- * @package EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder
+ * @package EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder
  */
 class SortClauseFactory implements FactoryInterface
 {

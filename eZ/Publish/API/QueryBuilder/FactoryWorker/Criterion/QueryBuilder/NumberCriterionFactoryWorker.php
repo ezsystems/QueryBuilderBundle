@@ -12,37 +12,43 @@ interface NumberCriterionFactoryWorker extends CriterionFactoryWorker
 {
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function eq( $value );
 
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function gt( $value );
 
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function gte( $value );
 
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+*@return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function lt( $value );
 
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function lte( $value );
 
     /**
      * @param $value
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+     *
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     public function between( $minValue, $maxValue );
 

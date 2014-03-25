@@ -7,7 +7,7 @@
  * @version //autogentag//
  */
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder;
 
 /**
  * Provides logical operators on a query
