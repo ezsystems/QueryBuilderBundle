@@ -12,6 +12,11 @@
         "ezsystems/ezpublish-api": "*",
         "symfony/symfony": "*"
     },
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*",
+        "matthiasnoback/symfony-dependency-injection-test": "0.2.*",
+        "mockery/mockery": "dev-master"
+    },
     "autoload": {
         "psr-0": {"EzSystems\\QueryBuilderBundle": ""}
     },
