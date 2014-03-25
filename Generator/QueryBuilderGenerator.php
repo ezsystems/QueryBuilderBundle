@@ -69,7 +69,7 @@ class QueryBuilderGenerator extends Generator
             'date' => 'DateCriterionFactoryWorker',
             'identifier' => 'IdentifierCriterionFactoryWorker',
             'id' => 'IdCriterionFactoryWorker',
-            'text' => 'TextCriterionFactoryWorker',
+            'text' => 'TextCriterionFactoryWorkerTest',
             'bool' => 'BooleanCriterionFactoryWorker'
         );
 
