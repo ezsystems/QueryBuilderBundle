@@ -12,7 +12,3 @@ script: phpunit --coverage-text
 
 notifications:
     email: false
-
-branches:
-    only:
-    - master
