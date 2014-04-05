@@ -9,7 +9,6 @@
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\SortClauseBuilder as SortClauseBuilderInterface;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query;
 use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker;
 
