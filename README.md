@@ -1,5 +1,7 @@
 # eZ Publish Query Builder bundle
 
+[![Build Status](https://travis-ci.org/ezsystems/QueryBuilderBundle.png?branch=unit_tests)](https://travis-ci.org/ezsystems/QueryBuilderBundle) [![Coverage Status](https://coveralls.io/repos/ezsystems/QueryBuilderBundle/badge.png?branch=unit_tests)](https://coveralls.io/r/ezsystems/QueryBuilderBundle?branch=unit_tests)
+
 This bundle for eZ Publish, the open-source CMS platform, provides a PHP API dedicated to fluently writing repository
 queries. It is built to provide **accurate** and contextually relevant **code completion** as long as a rich PHP IDE is used
 (**tested with PhpStorm, Eclipse and NetBeans**, works out of the box on all).
@@ -10,9 +12,8 @@ This bundle is provided as is. It is currently a working proof of concept:
 
 - most metadata criteria will work (`parentLocationId`, `contentTypeIdentifier`, `dateModified`...)
 - most metadata based sorting will work
-- about 30% of field filters have been tested
+- test coverage is quite high now, but quite a couple features aren't tested or working yet.
 
-It has only been tested with PhpStorm 7 and 8 so far.
 
 ## Installation
 
