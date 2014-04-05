@@ -8,7 +8,29 @@
  */
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\Tests\FactoryWorker\Criterion;
 
-class MapLocationDistanceCriterionFactoryWorkerTest
+/**
+ * @todo Implement MapLocationDistanceCriterionFactoryWorkerTest
+ */
+class MapLocationDistanceCriterionFactoryWorkerTest extends CriterionFactoryWorkerBaseTest
 {
+    public function testDistance()
+    {
+        $this->factory->shouldReceive( 'addValue' )->with( 'lat' );
+        $this->factory->shouldReceive( 'addValue' )->with( 'lon' );
 
+        $return = $this->worker->distance( 'lat', 'lon' );
+
+        $this->assertInstanceOf(
+            'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\NumberCriterionFactoryWorker',
+            $return
+        );
+    }
+
+    protected function getWorkerClass()
+    {
+        return 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\MapLocationDistanceCriterionFactoryWorker';
+    }
+
+    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\Criterion\GeneratedQueryBuilder\MapLocationDistanceCriterionFactoryWorker */
+    protected $worker;
 }
