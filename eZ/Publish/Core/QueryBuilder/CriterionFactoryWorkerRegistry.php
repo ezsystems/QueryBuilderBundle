@@ -8,9 +8,7 @@
  */
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder;
 use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder;
 
 /**
  * Instanciates value FactoryWorker objects
