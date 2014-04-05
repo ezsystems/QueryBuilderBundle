@@ -9,7 +9,7 @@
 
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\Tests;
 
-class CriterionBuilderTest extends PHPUnit_Framework_TestCase
+class CriterionBuilderTest
 {
 
 }
