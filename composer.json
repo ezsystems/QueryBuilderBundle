@@ -9,7 +9,7 @@
         }
     ],
     "require": {
-        "ezsystems/ezpublish-api": "*",
+        "ezsystems/ezpublish-api": "dev-query_debug_output",
         "symfony/symfony": "*",
         "sensio/generator-bundle": "2.2.*"
     },
@@ -22,5 +22,11 @@
     "autoload": {
         "psr-0": {"EzSystems\\QueryBuilderBundle": ""}
     },
-    "target-dir": "EzSystems/QueryBuilderBundle"
+    "target-dir": "EzSystems/QueryBuilderBundle",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/bdunogier/ezpublish-api"
+        }
+    ]
 }

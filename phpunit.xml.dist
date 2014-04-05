@@ -10,6 +10,7 @@
         <testsuite name="QueryBundle test suite">
             <directory>./Tests</directory>
             <directory>./eZ/Publish/Core/QueryBuilder/Tests</directory>
+            <directory>./eZ/Publish/API/QueryBuilder/Tests</directory>
         </testsuite>
     </testsuites>
     <filter>
@@ -19,6 +20,7 @@
                 <directory>vendor/</directory>
                 <directory>Tests/</directory>
                 <directory>eZ/Publish/Core/QueryBuilder/Tests</directory>
+                <directory>eZ/Publish/API/QueryBuilder/Tests</directory>
             </exclude>
         </whitelist>
     </filter>
