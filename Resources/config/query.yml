@@ -1,0 +1,93 @@
+parameters:
+    ezpublish.api.content.query.criterion.content_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentId
+    ezpublish.api.content.query.criterion.content_type_group_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentTypeGroupId
+    ezpublish.api.content.query.criterion.content_type_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentTypeId
+    ezpublish.api.content.query.criterion.content_type_identifier.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ContentTypeIdentifier
+    ezpublish.api.content.query.criterion.fulltext.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\FullText
+    ezpublish.api.content.query.criterion.language_code.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\LanguageCode
+    ezpublish.api.content.query.criterion.location_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationId
+    ezpublish.api.content.query.criterion.location_remote_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\LocationRemoteId
+    ezpublish.api.content.query.criterion.map_location_distance.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\MapLocationDistance
+    ezpublish.api.content.query.criterion.object_state_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ObjectStateId
+    ezpublish.api.content.query.criterion.parent_location_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\ParentLocationId
+    ezpublish.api.content.query.criterion.relation_list.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\RelationList
+    ezpublish.api.content.query.criterion.remote_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\RemoteId
+    ezpublish.api.content.query.criterion.section_id.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\SectionId
+    ezpublish.api.content.query.criterion.subtree.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\Subtree
+    ezpublish.api.content.query.criterion.visibility.class: eZ\Publish\API\Repository\Values\Content\Query\Criterion\Visibility
+
+services:
+    ezpublish.api.content.query.criterion.content_id:
+        class: %ezpublish.api.content.query.criterion.content_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.content_type_group_id:
+        class: %ezpublish.api.content.query.criterion.content_type_group_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.content_type_id:
+        class: %ezpublish.api.content.query.criterion.content_type_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.content_type_identifier:
+        class: %ezpublish.api.content.query.criterion.content_type_identifier.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: identifier }
+
+    ezpublish.api.content.query.criterion.fulltext:
+        class: %ezpublish.api.content.query.criterion.fulltext.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: text }
+
+    ezpublish.api.content.query.criterion.language_code:
+        class: %ezpublish.api.content.query.criterion.language_code.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: text }
+
+    ezpublish.api.content.query.criterion.location_id:
+        class: %ezpublish.api.content.query.criterion.location_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.location_remote_id:
+        class: %ezpublish.api.content.query.criterion.location_remote_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: identifier }
+
+    ezpublish.api.content.query.criterion.object_state_id:
+        class: %ezpublish.api.content.query.criterion.object_state_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.parent_location_id:
+        class: %ezpublish.api.content.query.criterion.parent_location_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.relation_list:
+        class: %ezpublish.api.content.query.criterion.relation_list.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.remote_id:
+        class: %ezpublish.api.content.query.criterion.remote_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.section_id:
+        class: %ezpublish.api.content.query.criterion.section_id.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: id }
+
+    ezpublish.api.content.query.criterion.subtree:
+        class: %ezpublish.api.content.query.criterion.subtree.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: text }
+
+    ezpublish.api.content.query.criterion.visibility:
+        class: %ezpublish.api.content.query.criterion.visibility.class%
+        tags:
+            - { name: ezpublish.api.content_query_criterion, type: text }
