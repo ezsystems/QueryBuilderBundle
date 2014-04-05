@@ -10,22 +10,21 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorke
 
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\SortClause\SortClauseDirectionFactoryWorker as SortClauseDirectionFactoryWorkerInterface;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\SortClauseBuilder;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\SortClauseFactoryInterface;
 use eZ\Publish\API\Repository\Values\Content\Query;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\SortClauseFactory;
 
 /**
  * SortClause worker that sets the sorting direction
  */
 class SortClauseDirectionFactoryWorker implements SortClauseDirectionFactoryWorkerInterface
 {
-    /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\SortClauseFactory */
+    /** @var SortClauseFactoryInterface */
     private $sortClauseFactory;
 
     /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\SortClauseBuilder */
     private $sortClauseBuilder;
 
-    public function __construct( SortClauseBuilder $sortClauseBuilder, SortClauseFactory $sortClauseFactory )
+    public function __construct( SortClauseBuilder $sortClauseBuilder, SortClauseFactoryInterface $sortClauseFactory )
     {
         $this->sortClauseFactory = $sortClauseFactory;
         $this->sortClauseBuilder = $sortClauseBuilder;

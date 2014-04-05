@@ -50,7 +50,7 @@ class DateCriterionFactoryWorker extends CriterionFactoryWorker implements DateC
         // UNIX timestamp
         if ( is_numeric( $argument ) )
         {
-            return $argument;
+            return (int)$argument;
         }
         // strtotime compatible string
         if ( is_string( $argument ) )

@@ -13,7 +13,7 @@ use eZ\Publish\API\Repository\Values\Content\Query;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use eZ\Publish\Core\Base\Exceptions\InvalidArgumentException;
 
-abstract class BaseQueryBuilder extends BaseCriterionBuilder
+abstract class BaseQueryBuilder extends BaseCriterionBuilder implements CriterionBuilderInterface
 {
     /** @var Query */
     private $query;

@@ -11,7 +11,7 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 use SplStack;
 
-class CriterionFactory implements FactoryInterface
+class CriterionFactory implements CriterionFactoryInterface
 {
     private $criterionClass;
     private $target;
@@ -31,12 +31,16 @@ class CriterionFactory implements FactoryInterface
         $this->value = new SplStack();
     }
 
-    /**
-     * @param $operator
-     * @param $value
-     *
-     * @return Criterion
-     */
+    public function getClass()
+    {
+        return $this->criterionClass;
+    }
+
+    public function setClass( $criterionClass )
+    {
+        $this->criterionClass = $criterionClass;
+    }
+
     public function create()
     {
         $criterion = call_user_func_array(
@@ -57,9 +61,11 @@ class CriterionFactory implements FactoryInterface
         $this->target = $target;
     }
 
-    /**
-     * Adds a value element to the factory. Multiple calls to addValue will stack them up.
-     */
+    public function getTarget()
+    {
+        return $this->target;
+    }
+
     public function addValue( $value )
     {
         $this->value->push( $value );
@@ -70,19 +76,20 @@ class CriterionFactory implements FactoryInterface
         $this->operator = $operator;
     }
 
-    /**
-     * Transforms the value into either null, or a single value, or the SplStack, in the order values were added.
-     * @return mixed
-     */
+    public function getOperator()
+    {
+        return $this->operator;
+    }
+
     public function getValue()
     {
-        if ( $this->value === null )
+        if ( $this->value === null || $this->value->count() == 0 )
         {
             return null;
 }
         if ( $this->value->count() == 1 )
         {
-            return $this->value->pop();
+            return $this->value->offsetGet( 0 );
         }
 
         return $this->value;

@@ -19,7 +19,7 @@ use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
  *
  * @package EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder
  */
-class SortClauseFactory implements FactoryInterface
+class SortClauseFactory implements SortClauseFactoryInterface
 {
     private $sortClauseClass;
     private $direction;
@@ -32,9 +32,19 @@ class SortClauseFactory implements FactoryInterface
         $this->target = $target;
     }
 
+    public function getClass()
+    {
+        return $this->sortClauseClass;
+    }
+
     public function setClass( $sortClauseClass )
     {
         $this->sortClauseClass = $sortClauseClass;
+    }
+
+    public function getTarget()
+    {
+        return $this->target;
     }
 
     public function setTarget( $target )
@@ -42,17 +52,18 @@ class SortClauseFactory implements FactoryInterface
         $this->target = $target;
     }
 
+    public function getDirection()
+    {
+        return $this->direction;
+    }
+
     public function setDirection( $direction )
     {
         $this->direction = $direction;
     }
 
-    /**
-     * @return Criterion
-     */
     public function create()
     {
         return new $this->sortClauseClass( $this->direction );
     }
-
 }

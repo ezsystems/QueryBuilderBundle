@@ -10,11 +10,11 @@ namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 
 /**
- * A factory is meant to instanciate an object configured on local properties:
+ * A factory is meant to instantiate an object configured on local properties:
  *
  * <code>
- * $thingFactory->setProperty( 'x' );
- * $thing = $thingFactory->create()
+ * $thingFactory->setClass( 'foo' );
+ * $thing = $thingFactory->create();
  * </code>
  *
  * @todo Rename to CriterionFactoryInterface
@@ -27,10 +27,14 @@ interface FactoryInterface
     public function create();
 
     /**
-     * Negates the Criterion
-     * @todo Should be a criterion thing (NegatableCriterionInterface ?)
+     * Sets the class built in the factory
+     * @param string $factoryClass
      * @return void
      */
-    // public function negate();
+    public function setClass( $factoryClass );
+
+    /**
+     */
+    public function getClass();
 }
 

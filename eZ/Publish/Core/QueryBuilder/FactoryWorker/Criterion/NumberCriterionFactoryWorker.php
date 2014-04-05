@@ -41,9 +41,4 @@ class NumberCriterionFactoryWorker extends CriterionFactoryWorker
     {
         return $this->addCriterion( array( $minValue, $maxValue ), Operator::BETWEEN );
     }
-
-    public function not()
-    {
-        throw new \Exception( "Not implemented yet" );
-    }
 }

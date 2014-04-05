@@ -18,6 +18,11 @@ class SortClauseBuilder implements SortClauseBuilderInterface
     /** @var \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder */
     protected $queryBuilder;
 
+    public function __construct( QueryBuilder $queryBuilder )
+    {
+        $this->queryBuilder = $queryBuilder;
+    }
+
     protected function startSortClauseFactoryWork( $sortClauseClass )
     {
         return new SortClauseDirectionFactoryWorker(
@@ -29,11 +34,6 @@ class SortClauseBuilder implements SortClauseBuilderInterface
     public function addSortClause( Query\SortClause $sortClause )
     {
         $this->queryBuilder->addSortClause( $sortClause );
-    }
-
-    public function __construct( QueryBuilder $queryBuilder )
-    {
-        $this->queryBuilder = $queryBuilder;
     }
 
     public function contentId()

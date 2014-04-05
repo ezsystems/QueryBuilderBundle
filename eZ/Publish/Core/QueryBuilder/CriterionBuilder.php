@@ -9,15 +9,14 @@
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder;
 
 use Exception;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder as CriterionBuilderInterface;
+use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder as CriterionBuilderAPIInterface;
 use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder;
 
 /**
  * @method CriterionBuilder or(CriterionBuilder $criterionBuilder) Start a LogicalOr criterion. Terminate with {@see endOr()}.
  * @method CriterionBuilder and(CriterionBuilder $criterionBuilder) Start a LogicalAnd criterion. Terminate with {@see endAnd()}.
  */
-class CriterionBuilder extends BaseCriterionBuilder implements CriterionBuilderInterface
+class CriterionBuilder extends BaseCriterionBuilder implements CriterionBuilderAPIInterface
 {
     public function __construct( CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry, QueryBuilder $parentBuilder = null)
     {
@@ -164,7 +163,7 @@ class CriterionBuilder extends BaseCriterionBuilder implements CriterionBuilderI
 
     public function emailAddressField( $fieldIdentifier )
     {
-        return $this->startFieldCriterionFactoryWork( 'date', $fieldIdentifier );
+        return $this->startFieldCriterionFactoryWork( 'text', $fieldIdentifier );
     }
 
     public function floatField( $fieldIdentifier )
@@ -209,7 +208,7 @@ class CriterionBuilder extends BaseCriterionBuilder implements CriterionBuilderI
 
     public function ratingField( $fieldIdentifier )
     {
-        return $this->startFieldCriterionFactoryWork( 'rating', $fieldIdentifier );
+        return $this->startFieldCriterionFactoryWork( 'number', $fieldIdentifier );
     }
 
     public function relationField( $fieldIdentifier )

@@ -9,10 +9,11 @@
 namespace EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion;
 
 use Exception;
-use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
-use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\CriterionBuilder;
-use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory;
 use EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\Criterion\CriterionFactoryWorker as CriterionFactoryWorkerInterface;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionBuilderInterface;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory;
+use EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryInterface;
+use eZ\Publish\API\Repository\Values\Content\Query\Criterion;
 
 abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
 {
@@ -26,7 +27,7 @@ abstract class CriterionFactoryWorker implements CriterionFactoryWorkerInterface
      * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactory $criterionFactory
      * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionBuilderInterface $builder
      */
-    public function __construct( CriterionFactory $criterionFactory, CriterionBuilder $builder )
+    public function __construct( FactoryInterface $criterionFactory, CriterionBuilderInterface $builder )
     {
         $this->criterionFactory = $criterionFactory;
         $this->builder = $builder;

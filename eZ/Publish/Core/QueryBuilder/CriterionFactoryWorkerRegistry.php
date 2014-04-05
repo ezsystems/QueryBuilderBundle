@@ -22,25 +22,25 @@ class CriterionFactoryWorkerRegistry
      * @var string[string]
      */
     protected static $criterionFactoryWorkers = array(
-        'date' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\DateCriterionFactoryWorker',
-        'identifier' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\IdentifierCriterionFactoryWorker',
-        'id' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\IdCriterionFactoryWorker',
-        'text' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\TextCriterionFactoryWorker',
-        'bool' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\BooleanCriterionFactoryWorker',
-        'number' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\NumberCriterionFactoryWorker',
-        'map_location' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\FactoryWorker\Criterion\MapLocationDistanceCriterionFactoryWorker'
+        'date' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\DateCriterionFactoryWorker',
+        'identifier' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\IdentifierCriterionFactoryWorker',
+        'id' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\IdCriterionFactoryWorker',
+        'text' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\TextCriterionFactoryWorker',
+        'bool' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\BooleanCriterionFactoryWorker',
+        'number' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\NumberCriterionFactoryWorker',
+        'map_location' => 'EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryWorker\Criterion\MapLocationDistanceCriterionFactoryWorker'
     );
 
     /**
      * Creates a new ValueBuilder of type $valueBuilderClass object
      *
      * @param string $factoryWorkerId id of a value builder from {@see self::$valueBuilders}
-     * @param CriterionBuilderInterface $queryBuilder The query builder that handles the whole building process
-     * @param CriterionFactory $criterionFactory
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionBuilderInterface $queryBuilder The builder that handles the building process
+     * @param \EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\FactoryInterface $criterionFactory
      *
      * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\FactoryWorker\Criterion\CriterionFactoryWorker
      */
-    public function create( $factoryWorkerId, CriterionBuilder $queryBuilder, CriterionFactory $criterionFactory )
+    public function create( $factoryWorkerId, CriterionBuilderInterface $queryBuilder, FactoryInterface $criterionFactory )
     {
         $workerClass = $this->getClass( $factoryWorkerId );
         return new $workerClass( $criterionFactory, $queryBuilder );
