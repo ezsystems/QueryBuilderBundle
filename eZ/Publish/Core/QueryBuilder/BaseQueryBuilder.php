@@ -33,13 +33,26 @@ abstract class BaseQueryBuilder extends BaseCriterionBuilder implements Criterio
         $this->criterionBuilder = new CriterionBuilder( $this->criterionFactoryWorkerRegistry, $this );
     }
 
+    public function filter()
+    {
+        $this->destination = 'filter';
+
+        return $this;
+    }
+
+    public function query()
+    {
+        $this->destination = 'query';
+
+        return $this;
+    }
+
     public function getQuery()
     {
-        if ( count( $this->criterionArray ) == 1 && ( $this->criterionArray[0] instanceof Criterion\LogicalAnd || $this->criterionArray[0] instanceof Criterion\LogicalOr ) )
-            $this->query->filter = $this->criterionArray[0];
-        else
-            $this->query->filter = new Criterion\LogicalAnd( $this->criterionArray );
+        $this->query->filter = $this->getCriterion($this->criterionArray['filter']);
+        $this->query->query = $this->getCriterion($this->criterionArray['query']);
         $this->query->sortClauses = $this->sortClauseArray;
+
         return $this->query;
     }
 
@@ -56,5 +69,14 @@ abstract class BaseQueryBuilder extends BaseCriterionBuilder implements Criterio
     public function expr()
     {
         return new CriterionBuilder( $this->criterionFactoryWorkerRegistry );
+    }
+
+    private function getCriterion(array $array)
+    {
+        if (count($array) == 1 && ($array[0] instanceof Criterion\LogicalAnd || $array[0] instanceof Criterion\LogicalOr)) {
+            return $array[0];
+        } else {
+            return new Criterion\LogicalAnd($array);
+        }
     }
 }

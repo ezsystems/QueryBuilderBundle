@@ -14,6 +14,8 @@ use eZ\Publish\Core\Base\Exceptions\InvalidArgumentType;
 
 abstract class BaseCriterionBuilder
 {
+    protected $destination = 'filter';
+
     /**
      * @var CriterionFactoryWorkerRegistry
      */
@@ -23,7 +25,7 @@ abstract class BaseCriterionBuilder
      * Only used when building as an expression builder.
      * @var \eZ\Publish\API\Repository\Values\Content\Query\Criterion[]
      */
-    protected $criterionArray = array();
+    protected $criterionArray = array('filter' => [], 'query' => []);
 
     public function __construct( CriterionFactoryWorkerRegistry $criterionFactoryWorkerRegistry )
     {
@@ -32,7 +34,7 @@ abstract class BaseCriterionBuilder
 
     public function addCriterion( Criterion $criterion )
     {
-        $this->criterionArray[] = $criterion;
+        $this->criterionArray[$this->destination][] = $criterion;
     }
 
     /**
