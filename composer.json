@@ -19,7 +19,6 @@
         "satooshi/php-coveralls": "dev-master"
     },
     "autoload": {
-        "psr-0": {"EzSystems\\QueryBuilderBundle": ""}
-    },
-    "target-dir": "EzSystems/QueryBuilderBundle"
+        "psr-4": {"EzSystems\\QueryBuilderBundle\\": ""}
+    }
 }
