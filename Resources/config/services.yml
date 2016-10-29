@@ -1,6 +1,6 @@
 parameters:
     ezpublish.api.query_builder.class: EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder
-    ezpublish.api.query_builder.criterion_factory_worker_registry.class: EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\QueryBuilder\CriterionFactoryWorkerRegistry
+    ezpublish.api.query_builder.criterion_factory_worker_registry.class: EzSystems\QueryBuilderBundle\eZ\Publish\Core\QueryBuilder\CriterionFactoryWorkerRegistry
 
 services:
     ezpublish.api.query_builder:

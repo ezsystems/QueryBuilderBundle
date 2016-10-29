@@ -54,14 +54,14 @@ class QueryBuilderTestCommand extends ContainerAwareCommand
         $this->setName( 'query-builder:test' );
     }
 
-    /** 
-     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder
+    /**
+     * @return \EzSystems\QueryBuilderBundle\eZ\Publish\API\QueryBuilder\Builder\QueryBuilder
      */
     private function getQueryBuilder()
     {
         return $this->getContainer()->get( 'ezpublish.api.query_builder' );
     }
-    
+
     private function printSearchResults( OutputInterface $output, Query $query )
     {
         $searchService = $this->getContainer()->get( 'ezpublish.api.service.search' );
