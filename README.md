@@ -17,7 +17,7 @@ This bundle is provided as is. It is currently a working proof of concept:
 
 ## Installation
 
-From your eZ Publish 5 installation, run `composer require ezsystems/query-builder-bundle.
+From your eZ Publish 5 installation, run `composer require ezsystems/query-builder-bundle:dev-master`.
 Register the bundle in `ezpublish/EzPublishKernel.php:
 
 ```php
@@ -27,7 +27,7 @@ Register the bundle in `ezpublish/EzPublishKernel.php:
             new FrameworkBundle(),
             // [...]
             new NelmioCorsBundle(),
-            new \EzSystems\QueryBuilder\EzSystemsQueryBuilderBundle()
+            new EzSystems\QueryBuilderBundle\EzSystemsQueryBuilderBundle()
         );
 ```
 

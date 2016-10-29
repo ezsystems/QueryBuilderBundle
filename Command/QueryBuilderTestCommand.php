@@ -38,7 +38,8 @@ class QueryBuilderTestCommand extends ContainerAwareCommand
         if ( $output->getVerbosity() > OutputInterface::VERBOSITY_NORMAL )
         {
             $output->writeln( '' );
-            $output->writeln( "QUERY: $query" );
+            $output->writeln( "QUERY: " );
+            print_r($query);
             $output->writeln( '' );
         }
 
