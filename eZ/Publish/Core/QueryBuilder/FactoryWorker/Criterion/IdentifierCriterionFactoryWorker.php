@@ -32,6 +32,6 @@ class IdentifierCriterionFactoryWorker extends CriterionFactoryWorker implements
 
     public function matches( $regexp )
     {
-        throw new \Exception( "Not implemented (might not be at all" );
+        throw new \Exception( "Not implemented (might not be at all)" );
     }
 }
